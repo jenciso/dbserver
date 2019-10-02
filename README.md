@@ -36,3 +36,5 @@ Acessar via Putty ou ssh usando a TCP port 2211
 ```
 ssh -p 2211 root@localhost
 ```
+
+![image2](https://i.imgur.com/a8n12S5.png)
