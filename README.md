@@ -28,3 +28,7 @@ Criar uma chave ssh
 su - ansible
 ssh-keygen
 ```
+
+
+![image](https://i.imgur.com/ZZ85rr6.png)
+
