@@ -9,4 +9,15 @@ PREFIX=24
 GATEWAY=10.0.5.1
 DNS1=10.0.5.1
 ```
+## Criando usuario ansible
 
+```
+useradd ansible
+passwd ansible
+```
+
+Criar o seguinte arquivo
+
+```
+echo 'ansible ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/ansible
+```
