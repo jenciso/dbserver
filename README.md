@@ -21,3 +21,9 @@ Criar o seguinte arquivo
 ```
 echo 'ansible ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/ansible
 ```
+
+Criar uma chave ssh
+
+```
+ssh-keygen
+```
