@@ -32,3 +32,7 @@ ssh-keygen
 
 ![image](https://i.imgur.com/ZZ85rr6.png)
 
+Acessar via Putty ou ssh usando a TCP port 2211
+```
+ssh -p 2211 root@localhost
+```
