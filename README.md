@@ -44,8 +44,7 @@ ssh -p 2211 root@localhost
 
 ```
 ansible -m shell -a "echo kube-master.10.0.5.31.xip.io > /etc/hostname" -i inventory centos
-ansible -m shell -a "sed -i 's/^IPADDR=10.0.5.11$/IPADDR=10.0.5.31/' /etc/sysconfig/ne
-twork-scripts/ifcfg-enp0s3" -i inventory centos
+ansible -m shell -a "sed -i 's/^IPADDR=10.0.5.11$/IPADDR=10.0.5.31/' /etc/sysconfig/network-scripts/ifcfg-enp0s3" -i inventory centos
 ansible -m shell -a "reboot" -i inventory centos
 ```
 
