@@ -38,3 +38,14 @@ ssh -p 2211 root@localhost
 ```
 
 ![image2](https://i.imgur.com/a8n12S5.png)
+
+
+## To provision
+
+```
+ansible -m shell -a "echo kube-master.10.0.5.31.xip.io > /etc/hostname" -i inventory centos
+ansible -m shell -a "sed -i 's/^IPADDR=10.0.5.11$/IPADDR=10.0.5.31/' /etc/sysconfig/ne
+twork-scripts/ifcfg-enp0s3" -i inventory centos
+ansible -m shell -a "reboot" -i inventory centos
+```
+
