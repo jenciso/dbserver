@@ -64,3 +64,9 @@ ansible -m shell -a "echo kube-node01.10.0.5.32.xip.io > /etc/hostname" -i inven
 ansible -m shell -a "sed -i 's/^IPADDR=10.0.5.11$/IPADDR=10.0.5.32/' /etc/sysconfig/network-scripts/ifcfg-enp0s3" -i inventory centos
 ansible -m shell -a "reboot" -i inventory centos
 ```
+
+As ansible user, clone the repo
+```
+mkdir playbooks
+git clone https://github.com/jenciso/ansible-kubeadm-dbserver
+```
