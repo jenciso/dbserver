@@ -43,9 +43,18 @@ ssh -p 2211 root@localhost
 
 ## To provision
 
+* MASTER
+
 ```
 ansible -m shell -a "echo kube-master.10.0.5.31.xip.io > /etc/hostname" -i inventory centos
 ansible -m shell -a "sed -i 's/^IPADDR=10.0.5.11$/IPADDR=10.0.5.31/' /etc/sysconfig/network-scripts/ifcfg-enp0s3" -i inventory centos
 ansible -m shell -a "reboot" -i inventory centos
 ```
 
+* NODE01
+
+```
+ansible -m shell -a "echo kube-node01.10.0.5.32.xip.io > /etc/hostname" -i inventory centos
+ansible -m shell -a "sed -i 's/^IPADDR=10.0.5.11$/IPADDR=10.0.5.32/' /etc/sysconfig/network-scripts/ifcfg-enp0s3" -i inventory centos
+ansible -m shell -a "reboot" -i inventory centos
+```
