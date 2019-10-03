@@ -19,6 +19,7 @@ passwd ansible
 Criar o seguinte arquivo
 
 ```
+cd /etc/sudoers.d
 echo 'ansible ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/ansible
 ```
 
